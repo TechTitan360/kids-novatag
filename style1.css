@@ -1,0 +1,822 @@
+/* Apply Background to Full Website */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('space_background.png') no-repeat center center fixed;
+    /* Use the space background image */
+    background-size: cover;
+    /* Ensures the image covers the entire viewport */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensures body covers the full height */
+}
+
+.no-scroll {
+    overflow: hidden;
+    /* Hides the scrollbar */
+}
+
+
+/* From Uiverse.io by Lakshay-art */
+.button5 {
+    position: relative;
+    top: 25px;
+    left: 25px;
+    border: 0;
+    background: radial-gradient(ellipse at 50% 50%, black 20%, transparent 72%);
+    font-size: 17px;
+    height: 200px;
+    width: 300px;
+    zoom: 1.2;
+}
+
+.main5 {
+    width: 70px;
+    margin: auto;
+    position: relative;
+    transform: rotateZ(0deg);
+    isolation: isolate;
+    scale: 1;
+    transition: all 1.5s;
+}
+
+.main5:hover {
+    transform: rotateZ(240deg);
+    scale: 2;
+    /* filter: drop-shadow(10px,10px,10px,white); */
+    filter: drop-shadow(-1px -1px 5px #69e9d6);
+}
+
+.rings {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    /* background-color: #000000; */
+    border-radius: 150px 150px 0 0;
+    background: radial-gradient(circle at 50% 100%, transparent 30%, #69e9d6 40%, #404D44 50%, #44867c 60%, #404D44 70%, transparent);
+}
+
+#saturn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(80deg, #69e9d6, #404D44, #000000);
+}
+
+#ring1 {
+    transform: rotateX(80deg);
+    top: -20px;
+    left: -65px;
+}
+
+#ring2 {
+    transform: rotateX(-100deg);
+    left: -65px;
+    z-index: -1;
+    top: -3px;
+}
+
+.asteriods-large {
+    position: absolute;
+    width: 8px;
+    height: 10px;
+    border-radius: 15px 8px;
+    background: linear-gradient(220deg, #6f7776, #598ea3, #311515);
+    transform: rotateZ(0deg);
+    transition: all 3s;
+}
+
+#asteriod1 {
+    top: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+#asteriod2 {
+    top: 35px;
+    height: 10px;
+    left: -55px;
+}
+
+#asteriod3 {
+    top: 35px;
+    height: 8px;
+    left: 85px;
+}
+
+#asteriod4 {
+    top: 40px;
+    height: 4px;
+    width: 4px;
+    left: -40px;
+}
+
+#asteriod5 {
+    top: 35px;
+    height: 4px;
+    width: 4px;
+    left: 82px;
+}
+
+.asteriods-small {
+    position: absolute;
+    width: 4px;
+    height: 3px;
+    border-radius: 15px 8px;
+    background: linear-gradient(80deg, #6f7776, #598ea3, #311515);
+    transform-origin: 50px 50px;
+    transform: rotateZ(0deg);
+    transition: all 3s;
+}
+
+#asteriod6 {
+    top: 6px;
+    left: -5px;
+    border-radius: 50%;
+}
+
+#asteriod7 {
+    top: 15px;
+    left: -35px;
+}
+
+#asteriod8 {
+    top: 35px;
+    left: 65px;
+}
+
+#asteriod9 {
+    top: 60px;
+    left: -10px;
+}
+
+#asteriod10 {
+    top: 15px;
+    left: 112px;
+}
+
+.main5:hover>.asteriods-large,
+.main:hover>.asteriods-small {
+    transform: translateX(28px);
+}
+
+.main5:hover>#explore {
+    translate: -10px 20px;
+    transform: rotateZ(120deg);
+}
+
+.main5:not(hover)>#explore {
+    translate: 0px;
+    transform: rotateZ(0deg);
+}
+
+.main5:not(hover)>.asteriods-large,
+.main:not(hover)>.asteriods-small {
+    transform: translateX(0px);
+}
+
+.main5:is(:active)>#explore {
+    translate: -100px 200px;
+}
+
+.main5:is(:active) {
+    translate: -200px;
+}
+
+
+
+
+/*--------------------------Welcome Message Styling--------------------------------*/
+.welcome-message {
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 1s, opacity 1s;
+    background: transparent;
+    /* Semi-transparent background for contrast */
+}
+
+.para1 {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/*-------------------------------From Uiverse.io by tarantino421--------------------------------------*/
+.box {
+    --clr-shadow__border: #d9a1ff;
+    --clr-text: #F6F4EB;
+    --clr-space: #120e1e;
+    --clr-space-gr: #271950;
+    --clr-star: #E9F8F9;
+    --size: 3rem;
+    position: relative;
+    outline: 1px solid var(--clr-shadow__border);
+}
+
+.backbutton {
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    background: transparent;
+    padding: calc(var(--size) / 3) var(--size);
+    border: none;
+    cursor: pointer;
+    color: var(--clr-text);
+    text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+        -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+}
+
+.space {
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background: linear-gradient(160deg, var(--clr-space), var(--clr-space-gr));
+}
+
+.box:hover .space {
+    opacity: 1;
+}
+
+.star {
+    height: 4rem;
+    width: 0.3rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: var(--clr-star);
+    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+}
+
+@keyframes space-animation {
+    0% {
+        transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+    }
+
+    100% {
+        transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+    }
+}
+
+/*---------------------------------Main Content Styling---------------------------------*/
+.main-content {
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 1s, opacity 1s;
+    background: transparent;
+    /* Semi-transparent background for contrast */
+}
+
+/* -------------------------Explore more button------------------ */
+/* Centering the Explore More Button */
+.btn-container {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Full-width for proper centering */
+    margin-top: 30px; /* Increased margin to create extra space above */
+    position: relative; /* To contain button positioning */
+    overflow: hidden; /* Prevent any overflow from affecting the rest of the page */
+}
+
+/* Styling for Explore More Button */
+button#space-btn {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: linear-gradient(80deg, #ffcbf2, #ec38bc, #7303c0, #03001e);
+    cursor: pointer;
+    padding: 15px 30px; /* Adjust padding for better alignment */
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Keep the button above other elements */
+}
+
+button#space-btn:hover {
+    transform: translateY(-3px); /* Reduce the movement to prevent cutting off */
+    background: linear-gradient(80deg, #ffcbf2, #f062c0, #5300a9, #000010); /* Slightly different gradient on hover */
+}
+
+/* Button Span Styling */
+button#space-btn span {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+/* Star Styling for the Button */
+button#space-btn div.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: blink 2s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+}
+
+/* Shooting Star Styling */
+button#space-btn div.shooting-star {
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    background: linear-gradient(80deg, #ffffff, #ffffff00);
+    border-radius: 50%;
+    transform: rotate(-40deg);
+    opacity: 0;
+}
+
+button#space-btn div.shooting-star-1 {
+    animation: fallingStar1 4s 6s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+}
+
+button#space-btn div.shooting-star-2 {
+    animation: fallingStar2 2s 10s cubic-bezier(0.15, 0.83, 0.66, 1) infinite;
+}
+
+/* Keyframe Animations */
+@keyframes blink {
+    0%, 100% {
+        box-shadow: 0 0 10px 0 white;
+    }
+    50% {
+        box-shadow: 0 0 10px 2px white;
+    }
+}
+
+@keyframes fallingStar1 {
+    0% {
+        top: -10px;
+        left: 220px;
+        opacity: 1;
+    }
+    100% {
+        top: 200px;
+        left: -20px;
+        opacity: 1;
+    }
+}
+
+@keyframes fallingStar2 {
+    0% {
+        top: -10px;
+        left: 150px;
+        opacity: 1;
+    }
+    100% {
+        top: 200px;
+        left: -90px;
+        opacity: 1;
+    }
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    /* Semi-transparent nav background */
+}
+
+nav h2 a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.button,
+.bin-button,
+.fullscreen-button,
+.bookmarkBtn,
+.explore-more-button {
+    background-color: #ffd700;
+    /* Gold */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+}
+
+.button:hover,
+.bin-button:hover,
+.fullscreen-button:hover,
+.bookmarkBtn:hover,
+.explore-more-button:hover {
+    background-color: #ffc107;
+    /* Lighter gold on hover */
+    transform: translateY(-2px);
+}
+
+/* Specific Button Styling for Flex Containers */
+.canvas-controls button,
+.planet-selection button {
+    margin: 5px;
+}
+
+/* Main Headline */
+.mainhead {
+    position: relative;
+    top: -150px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffd700;
+    text-align: center;
+}
+
+/*--------------------Galactic Journey Section----------------------*/
+.story-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: none;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.galactic-heading {
+    font-size: 2.5rem;
+    color: #ffcbf2;
+    /* Vibrant color for the heading */
+    margin-bottom: 20px;
+}
+
+/* Planet Cards Container */
+.planet-cards {
+    display: flex;
+    gap: 100px;
+    /* Increased the gap to create more distance between tiles */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Planet Card Styling */
+.planet-card {
+    perspective: 1000px;
+    /* Enables the 3D effect */
+    width: 280px;
+    height: 350px;
+}
+
+.planet-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.planet-card:hover .planet-card-inner {
+    transform: rotateY(180deg);
+}
+
+.planet-card-front,
+.planet-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.planet-card-front {
+    background: linear-gradient(135deg, #1b1f41, #4c67c4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.planet-card-front img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.planet-card:hover .planet-card-front img {
+    transform: scale(1.1);
+    /* Enlarge image on hover */
+}
+
+.planet-card-back {
+    background: #4c67c4;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.planet-card-back p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.explore-button {
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+}
+
+
+/* Fun Facts Section Styles */
+.fun-facts-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Styles */
+.fun-facts-section h2 {
+    color: #ffd700; /* Gold color for the heading */
+    margin-bottom: 20px;
+}
+
+/* Fact Button Styles */
+.fact-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background: linear-gradient(90deg, #ff6f47, #ffd700);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-bottom: 20px; /* Spacing below the button */
+}
+
+.fact-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ffd700, #ff6f47);
+}
+
+/* Fact Container Styles */
+.fact-container {
+    background: transparent;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.fun-fact-text {
+    color: white;
+    font-size: 1.1em;
+}
+
+/* Hover Animation */
+.fact-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Add some responsive adjustments */
+@media (max-width: 768px) {
+    .fact-button {
+        width: 90%; /* Make the button wider on small screens */
+    }
+}
+
+
+/* Canvas Container and Controls */
+.canvas-container {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#drawingCanvas {
+    background-image: linear-gradient(#ffffff 1.1rem, #ccc 1.2rem);
+    background-size: 100% 1.2rem;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+}
+
+.canvas-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+/*--------------Fullscreen Button----------------*/
+
+/* From Uiverse.io by vinodjangid07 */ 
+.fullscreen-btn {
+    position: absolute; /* Position it absolutely relative to the canvas container */
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    width: 40px; /* Size of the button */
+    height: 40px; /* Size of the button */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Make background transparent */
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10; /* Keep it above other elements */
+}
+  
+  .fullscreen-btn svg {
+    height: 100%;
+  }
+  .fullscreen-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+.tooltip {
+    position: absolute;
+    top: -40px;
+    background-color: rgba(255, 255, 255, 0.753);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    transition: all 0.3s;
+    opacity: 0; /* Start hidden */
+}
+  
+
+/* Bin Button Styling */
+.bin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ff4747;
+    border: 2px solid #ffb3b3;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bin-button:hover {
+    background-color: #ff3030;
+    transform: rotate(10deg);
+}
+
+/* Bookmark Button */
+.bookmarkBtn {
+    display: flex; /* Use flex to center the content inside */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 150px; /* Set width */
+    height: 50px; /* Set height */
+    background: linear-gradient(to right, #ffd700, #ff6f47);
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.activity-section {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.bookmarkBtn:hover {
+    background: linear-gradient(to right, #2509a2, #5e056f);
+    transform: translateY(-2px);
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffd700;
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* Responsive Design */
+
+/* Tablet Devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .planet-card {
+        width: calc(50% - 20px);
+    }
+
+    .mainhead {
+        font-size: 2em;
+    }
+
+    .canvas-container {
+        max-width: 90%;
+    }
+
+    .fullscreen-button {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Mobile Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav h2 a {
+        font-size: 1.5em;
+    }
+
+    .planet-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mainhead {
+        font-size: 1.8em;
+    }
+
+    .button,
+    .fullscreen-button,
+    .bookmarkBtn {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    #drawingCanvas {
+        width: 100%;
+    }
+
+    .canvas-controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .fullscreen-button {
+        position: static;
+        margin-top: 15px;
+    }
+}
+.centerr{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}

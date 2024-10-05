@@ -1,0 +1,515 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #1b1f41, #4c67c4);
+    color: #ffffff;
+}
+
+.welcome-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #4c67c4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s, opacity 1s;
+    text-align: center;
+}
+
+.main-content {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(0);
+    transition: transform 1s, opacity 1s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav h2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* From Uiverse.io by tarantino421 */ 
+.box {
+    --clr-shadow__border: #d9a1ff;
+    --clr-text: #F6F4EB;
+    --clr-space: #120e1e;
+    --clr-space-gr: #271950;
+    --clr-star: #E9F8F9;
+    --size: 3rem;
+    position: relative;
+    outline: 1px solid var(--clr-shadow__border);
+    position: relative;
+    right: 50px;
+    
+}
+.button {
+    font-weight: 500;
+    padding: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    background: transparent;
+    margin: 9px;
+    border: none;
+    cursor: pointer;
+    color: var(--clr-text);
+    text-shadow: 2px 0px var(--clr-shadow__border), 0px 2px var(--clr-shadow__border),
+    -2px 0px var(--clr-shadow__border), 0px -2px var(--clr-shadow__border);
+  }
+  
+  .space {
+    width: 100%;
+    height: 100%;
+    bottom: 0%;
+    gap: 1.5rem;
+    transition: 0.5s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    background: linear-gradient( 160deg, var(--clr-space), var(--clr-space-gr));
+  }
+  
+  .box:hover .space {
+    opacity: 1;
+  }
+  
+  .star {
+    height: 4rem;
+    width: 0.3rem;
+    transition: 0.5s;
+    border-radius: 50px;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: var(--clr-star);
+    animation: space-animation calc(0.1s * var(--i)) linear infinite;
+  }
+  
+  @keyframes space-animation {
+    0% {
+      transform: rotate(-30deg) translateY(calc(-52% * var(--i)));
+    }
+  
+    100% {
+      transform: rotate(-30deg) translateY(calc(52% * var(--i)));
+    }
+  }
+    
+
+.saturn {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    display: block;
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+main {
+    text-align: center;
+}
+
+.mainhead {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+/* From Uiverse.io by Jedi-hongbin */ 
+button {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+   }
+   
+   button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 20px;
+    transition: all 0.4s ease-in;
+   }
+   
+   button:hover > svg {
+    font-size: 1.2em;
+    transform: translateX(-5px);
+   }
+   
+   button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+   }
+button {
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d38910;
+}
+
+.planet-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.planet-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 25%;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.planet-card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.planet-card img {
+    width: 100px;
+    height: auto;
+}
+
+.fun-facts-section,
+.activity-section,
+.quiz-section {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.activity-section {
+    text-align: left;
+}
+
+canvas {
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    background: #ffffff;
+    max-width: 100%;
+    height: auto;
+}
+
+.bookmarkBtn {
+    width: 120px;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.IconContainer {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgb(255, 136, 255), rgb(172, 70, 255));
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+    width: 90px;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+    transform: scale(0.95);
+    transition-duration: 0.3s;
+}
+
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffd700;
+    border-radius: 15px;
+}
+
+.quiz-section {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.quiz-section h2 {
+    color: #ffd700;
+}
+
+.quiz-section p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.question button {
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.question button:hover {
+    background: #d38910;
+    transform: scale(1.05);
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ffd700;
+    transition: opacity 0.5s ease;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .planet-card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .planet-card {
+        width: 45%;
+    }
+
+    .mainhead {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .planet-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mainhead {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav h2 a {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1em;
+        padding: 15px;
+    }
+}
+
+.activity-section {
+    text-align: center;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* Full viewport height */
+}
+
+canvas {
+    border: 2px solid #fff;
+    width: 80%;
+    max-width: 800px;
+    /* Decent size limit */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+.fullscreen-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff4b2b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fullscreen-button:hover {
+    background-color: #ff6f47;
+}
+
+.bin-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(255, 95, 95);
+    cursor: pointer;
+    border: 2px solid rgb(255, 201, 201);
+    transition-duration: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.bin-bottom {
+    width: 15px;
+    z-index: 2;
+}
+
+.bin-top {
+    width: 17px;
+    transform-origin: right;
+    transition-duration: 0.3s;
+    z-index: 2;
+}
+
+.bin-button:hover .bin-top {
+    transform: rotate(45deg);
+}
+
+.bin-button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.bin-button:active {
+    transform: scale(0.9);
+}
+
+.garbage {
+    position: absolute;
+    width: 14px;
+    height: auto;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.bin-button:hover .garbage {
+    animation: throw 0.4s linear;
+}
+
+@keyframes throw {
+    from {
+        transform: translate(-400%, -700%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0%, 0%);
+        opacity: 1;
+    }
+}
+
+
+/* Ensure the buttons are spaced properly */
+.canvas-controls {
+    margin: 15px 0;
+    /* Add margin for spacing */
+}
+
+.planet-selection {
+    margin-bottom: 15px;
+    /* Add margin for spacing */
+}
